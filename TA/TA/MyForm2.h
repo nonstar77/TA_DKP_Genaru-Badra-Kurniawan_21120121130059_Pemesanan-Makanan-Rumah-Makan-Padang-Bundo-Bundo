@@ -575,7 +575,7 @@ namespace TA {
 			// 
 			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.BackgroundImage")));
 			this->pictureBox4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox4->Location = System::Drawing::Point(570, 431);
+			this->pictureBox4->Location = System::Drawing::Point(570, -1);
 			this->pictureBox4->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(406, 100);
@@ -586,7 +586,7 @@ namespace TA {
 			// 
 			this->button3->BackColor = System::Drawing::Color::Orange;
 			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(911, 438);
+			this->button3->Location = System::Drawing::Point(911, 6);
 			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(56, 23);
@@ -627,6 +627,7 @@ namespace TA {
 			this->textBox2->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(1) { L"Jl. Pringgodani No 17" });
 			this->textBox2->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::SuggestAppend;
 			this->textBox2->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
+			this->textBox2->Enabled = false;
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->textBox2->Location = System::Drawing::Point(449, 388);
 			this->textBox2->Margin = System::Windows::Forms::Padding(2);
@@ -758,7 +759,6 @@ namespace TA {
 		}
 	}
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (comboBox1->SelectedIndex > 0) {
 			int a = comboBox1->SelectedIndex * 20;
 			int b = comboBox2->SelectedIndex * 20;
 			int c = comboBox3->SelectedIndex * 80;
@@ -770,12 +770,10 @@ namespace TA {
 			int aa[7] = { a, b, c, d, ee, f, g };
 			for (int i = 0; i < 7; i++) {
 				t += aa[i];
-			}
 			textBox1->Text = "Rp " + t + ".000";
 		}
 	}
 	private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (comboBox2->SelectedIndex > 0) {
 			int a = comboBox1->SelectedIndex * 20;
 			int b = comboBox2->SelectedIndex * 20;
 			int c = comboBox3->SelectedIndex * 80;
@@ -787,12 +785,10 @@ namespace TA {
 			int aa[7] = { a, b, c, d, ee, f, g };
 			for (int i = 0; i < 7; i++) {
 				t += aa[i];
-			}
 			textBox1->Text = "Rp " + t + ".000";
 		}
 	}
 	private: System::Void comboBox3_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (comboBox3->SelectedIndex >= 0) {
 			int a = comboBox1->SelectedIndex * 20;
 			int b = comboBox2->SelectedIndex * 20;
 			int c = comboBox3->SelectedIndex * 80;
@@ -804,12 +800,10 @@ namespace TA {
 			int aa[7] = { a, b, c, d, ee, f, g };
 			for (int i = 0; i < 7; i++) {
 				t += aa[i];
-			}
 			textBox1->Text = "Rp " + t + ".000";
 		}
 	}
 	private: System::Void comboBox4_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (comboBox4->SelectedIndex >= 0) {
 			int a = comboBox1->SelectedIndex * 20;
 			int b = comboBox2->SelectedIndex * 20;
 			int c = comboBox3->SelectedIndex * 80;
@@ -821,12 +815,10 @@ namespace TA {
 			int aa[7] = { a, b, c, d, ee, f, g };
 			for (int i = 0; i < 7; i++) {
 				t += aa[i];
-			}
 			textBox1->Text = "Rp " + t + ".000";
 		}
 	}
 	private: System::Void comboBox5_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (comboBox5->SelectedIndex >= 0) {
 			int a = comboBox1->SelectedIndex * 20;
 			int b = comboBox2->SelectedIndex * 20;
 			int c = comboBox3->SelectedIndex * 80;
@@ -838,12 +830,10 @@ namespace TA {
 			int aa[7] = { a, b, c, d, ee, f, g };
 			for (int i = 0; i < 7; i++) {
 				t += aa[i];
-			}
 			textBox1->Text = "Rp " + t + ".000";
 		}
 	}
 	private: System::Void comboBox6_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (comboBox6->SelectedIndex >= 0) {
 			int a = comboBox1->SelectedIndex * 20;
 			int b = comboBox2->SelectedIndex * 20;
 			int c = comboBox3->SelectedIndex * 80;
@@ -855,12 +845,10 @@ namespace TA {
 			int aa[7] = { a, b, c, d, ee, f, g };
 			for (int i = 0; i < 7; i++) {
 				t += aa[i];
-			}
 			textBox1->Text = "Rp " + t + ".000";
 		}
 	}
 	private: System::Void comboBox7_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (comboBox7->SelectedIndex >= 0) {
 			int a = comboBox1->SelectedIndex * 20;
 			int b = comboBox2->SelectedIndex * 20;
 			int c = comboBox3->SelectedIndex * 80;
@@ -874,11 +862,13 @@ namespace TA {
 				t += aa[i];
 			}
 			textBox1->Text = "Rp " + t + ".000";
-		}
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (textBox1->Text == "Rp 0.000") {
 			MessageBox::Show("Anda belum memilih", "RM Padang Bundo-Bundo", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+		else if (!radioButton1->Checked && !radioButton2->Checked) {
+			MessageBox::Show("Anda belum memilih metode pengiriman", "RM Padang Bundo-Bundo", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 		else if (radioButton2->Checked == true && textBox2->TextLength == 0) {
 			MessageBox::Show("Anda belum memasukkan alamat", "RM Padang Bundo-Bundo", MessageBoxButtons::OK, MessageBoxIcon::Error);
