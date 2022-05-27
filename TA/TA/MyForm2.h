@@ -13,6 +13,7 @@ namespace TA {
 	/// <summary>
 	/// Summary for MyForm2
 	/// </summary>
+
 	public ref class MyForm2 : public System::Windows::Forms::Form
 	{
 	public:
@@ -728,7 +729,7 @@ namespace TA {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
+	
 		}
 
 #pragma endregion

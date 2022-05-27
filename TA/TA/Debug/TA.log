@@ -1,6 +1,1 @@
-﻿  MyForm1.cpp
-C:\Users\HP\source\repos\TA\TA\MyForm1.cpp(6,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-  MyForm2.cpp
-  Generating Code...
-  MyForm3.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  TA.vcxproj -> C:\Users\HP\source\repos\TA\Debug\TA.exe
+﻿  TA.vcxproj -> C:\Users\HP\source\repos\TA\Debug\TA.exe

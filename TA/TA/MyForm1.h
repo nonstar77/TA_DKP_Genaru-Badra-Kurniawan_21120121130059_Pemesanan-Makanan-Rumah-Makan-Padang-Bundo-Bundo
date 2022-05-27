@@ -1,5 +1,7 @@
 #pragma once
 #include "MyForm2.h"
+#include "credentials.h"
+#include <string>
 
 namespace TA {
 
@@ -9,6 +11,7 @@ namespace TA {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace TA;
 
 	/// <summary>
 	/// Summary for MyForm1
@@ -37,6 +40,7 @@ namespace TA {
 		}
 
 	protected:
+	private: credentials login;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
@@ -140,7 +144,7 @@ namespace TA {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->label5->ForeColor = System::Drawing::Color::Red;
-			this->label5->Location = System::Drawing::Point(194, 483);
+			this->label5->Location = System::Drawing::Point(196, 483);
 			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(197, 20);
@@ -247,12 +251,22 @@ namespace TA {
 
 		}
 #pragma endregion
+/*	String^ uname = "genaru";
+	String^ pword = "gege";
+	void Login() {
+		if (textBox1->Text == uname && textBox2->Text == pword) {
+			MyForm2^ a = gcnew MyForm2();
+			MyForm1::Hide();
+			a->Show();
+		}
+		else {
+			label5->Visible = true;
+		}
+	}*/
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ username = "genaru";
-		String^ password = "gege";
-		if (textBox1->Text == username && textBox2->Text == password) {
-			MessageBox::Show("Login Berhasil", "RM Padang Bundo-Bundo", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		login.setCredentials(textBox1->Text, textBox2->Text);
+		if (login.checkCredentials()) {
 			MyForm1::Hide();
 			MyForm2^ a = gcnew MyForm2();
 			a->Show();
