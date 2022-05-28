@@ -1,0 +1,5 @@
+C:\Users\HP\source\repos\TA\TA\Debug\TA.vcxproj.AssemblyReference.cache
+C:\Users\HP\source\repos\TA\TA\Debug\TA.MyForm1.resources
+C:\Users\HP\source\repos\TA\TA\Debug\TA.MyForm2.resources
+C:\Users\HP\source\repos\TA\TA\Debug\TA.vcxproj.GenerateResource.cache
+C:\Users\HP\source\repos\TA\TA\Debug\TA.MyForm3.resources
