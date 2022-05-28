@@ -127,7 +127,7 @@ namespace TA {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(214, 80);
 			this->button1->TabIndex = 30;
-			this->button1->Text = L"Pesan lagi";
+			this->button1->Text = L"Keluar";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm3::button1_Click);
 			// 
