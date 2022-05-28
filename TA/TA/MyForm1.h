@@ -251,18 +251,6 @@ namespace TA {
 
 		}
 #pragma endregion
-/*	String^ uname = "genaru";
-	String^ pword = "gege";
-	void Login() {
-		if (textBox1->Text == uname && textBox2->Text == pword) {
-			MyForm2^ a = gcnew MyForm2();
-			MyForm1::Hide();
-			a->Show();
-		}
-		else {
-			label5->Visible = true;
-		}
-	}*/
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		login.setCredentials(textBox1->Text, textBox2->Text);
